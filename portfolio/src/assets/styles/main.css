@@ -1,1 +1,67 @@
-@import 'tailwindcss';
+@import "tailwindcss";
+
+:root {
+  /* Tema oscuro */
+  --principal: #fafafa;
+  --secondary: #d1d1d1;
+  --decoration: #60a5fa;
+  --general: #121212;
+  --base: #44444480;
+}
+
+.light {
+  /* Tema claro */
+  --principal: #1e1e1e;
+  --secondary: #4a4a4a;
+  --decoration: #3b82f6;
+  --general: #dbeeff;
+  --base: #ffffff80;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("@/assets/fonts/Raleway-All-Normal.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("@/assets/fonts/Roboto-All-Normal.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("@/assets/fonts/Raleway-All-Italic.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("@/assets/fonts/Roboto-All-Italic.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@theme {
+  --color-principal: var(--principal); /* Titulos o textos importantes*/
+  --color-secondary: var(--secondary); /* Textos en general */
+  --color-decoration: var(--decoration); /* Botones y decoracion */
+  --color-general: var(--general); /* Fondo de la web */
+  --color-base: var(--base); /* Fondo tarjetas */
+
+  --font-raleway: "Raleway", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
+}
+
+body {
+  font-family: "Roboto";
+  background-image: url(/portfolio/public/background-pattern.svg);
+}
