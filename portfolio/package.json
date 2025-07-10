@@ -20,6 +20,7 @@
     "@vueuse/motion": "^3.0.3",
     "aos": "^2.3.4",
     "prettier-plugin-tailwindcss": "^0.6.13",
+    "process": "^0.11.10",
     "vue": "^3.5.17",
     "vue-i18n": "^11.1.9",
     "vue-typed-js": "^0.1.2"

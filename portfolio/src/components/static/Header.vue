@@ -16,7 +16,8 @@
       <ul class="text-secondary flex gap-3 text-lg font-semibold lg:gap-6">
         <li v-for="item in navItems" :key="item.text">
           <a
-            :href="item.href"
+            href="#"
+            @click.prevent="scrollToSection(item.href)"
             class="text-secondary group hover:text-decoration relative py-1 transition-colors"
           >
             {{ $t(item.text) }}
@@ -76,7 +77,11 @@
 
       <ul class="text-secondary flex flex-col gap-3 px-6 text-lg font-semibold lg:gap-6">
         <li v-for="item in navItems" :key="locale">
-          <a :href="item.href" class="group hover:text-decoration relative py-1 transition-colors">
+          <a
+            href="#"
+            @click.prevent="scrollToSection(item.href)"
+            class="group hover:text-decoration relative py-1 transition-colors"
+          >
             {{ $t(item.text) }}
             <span
               class="bg-decoration absolute bottom-0 left-1/2 h-[2px] w-0 transition-all duration-300 group-hover:left-0 group-hover:w-full"
@@ -93,6 +98,7 @@
 import { ref, onMounted, onUnmounted } from "vue";
 import { useLang } from "@/composables/useLang";
 import { useTheme } from "@/composables/useTheme";
+import { getLenis } from "@/composables/useLenis";
 import ThemeToggle from "@/components/buttons/ThemeToggle.vue";
 
 // VARIABLES
@@ -111,6 +117,15 @@ const navItems = [
 ];
 
 // METODOS
+// Funcion que permite hacer el scroll-smooth entre secciones de la pagina
+function scrollToSection(id) {
+  const target = document.querySelector(id);
+  const lenis = getLenis();
+  if (target && lenis) {
+    lenis.scrollTo(target, { offset: -80 });
+  }
+}
+
 // Funcion que detecta el scroll
 const handleScroll = () => {
   scrolled.value = window.scrollY > 20;

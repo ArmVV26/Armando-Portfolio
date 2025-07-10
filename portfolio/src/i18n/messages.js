@@ -1,3 +1,4 @@
+import { language } from "@vue/eslint-config-prettier/skip-formatting";
 import { createI18n } from "vue-i18n";
 
 const messages = {
@@ -19,7 +20,70 @@ const messages = {
         "Apasionado por la Tecnología",
       ],
       description:
-        "Apasionado por el desarrollo full stack, con formación en ciberseguridad y experiencia en entornos ágiles.",
+        "Apasionado por el desarrollo full stack, con formación en ciberseguridad industrial y experiencia en entornos ágiles.",
+    },
+    about: {
+      title: "Sobre Mí",
+      subtitle: "Conoce mi perfil",
+      description:
+        "Soy Armando Vaquero, un Desarrollador Web Junior con formación en Desarrollo de Aplicaciones Web y experiencia práctica en desarrollo full stack en entornos ágiles. Sólida base en tecnologías front-end y back-end, así como una formación complementaria en ciberseguridad industrial. Apasionado por la tecnología y en constante aprendizaje. ",
+      downloadCV: "Descargar CV",
+      language: ["Español (Nativo)", "Ingles (Nivel B1 - Sin Certificado)"],
+      location: "Granada, España",
+      education: "Mi Educación",
+      studies: [
+        {
+          year: "2018 - 2020",
+          name: "Bachillerato de Ciencias",
+          school: "IES Manuel de Falla",
+          average: "Nota Media: 6,7 / 10",
+        },
+        {
+          year: "2020 - 2022",
+          name: "Grado Superior en Telecomunicaciones e Informático",
+          school: "IES Virgen de las Nieves",
+          text: "Grado que proporciona una formación integral en la instalación, configuración y mantenimiento de redes y sistemas informáticos. Se aprende a gestionar servidores, redes de comunicación y telecomunicaciones.",
+          average: "Nota Media: 8,62 / 10",
+        },
+        {
+          year: "2022 - 2023",
+          name: "Curso de Especialización en Ciberseguridad Industrial",
+          school: "IES Virgen de las Nieves",
+          text: "Curso que se enfoca en las prácticas y tecnologías de protección de sistemas y redes dentro del ámbito industrial. Se tratan temas como auditorías de seguridad, protección de infraestructuras críticas y gestión de incidencias.",
+          average: "Nota Media: 8,8 / 10",
+        },
+        {
+          year: "2023 - 2025",
+          name: "Grado Superior de Desarrollo de Aplicaciones Web",
+          school: "IES Francisco Ayala",
+          text: "Grado centrado en el desarrollo de aplicaciones web, cubriendo desde el diseño y la maquetación de sitios web hasta la creación de aplicaciones más complejas utilizando lenguajes como JavaScript, CSS, HTML y algunos frameworks modernos.",
+          average: "Nota Media: 9,2 / 10",
+        },
+      ],
+      experience: "Mi Experiencia",
+      works: [
+        {
+          time: "Abril 2022 - Julio 2022",
+          company: "Rodyh Seguridad",
+          text: [
+            "Planificación e Instalación de alarmas cableadas e inalámbricas.",
+            "Instalación y configuración de CCTV.",
+            "Instalación y configuración de sistemas de alarmas antincendios.",
+          ],
+        },
+        {
+          time: "Marzo 2025 - Junio 2025",
+          company: "Constella Intelligence",
+          text: [
+            "Desarrollo de interfaz basada en Vue.js: componentes reutilizables, gráficos, rutas y lógica del cliente.",
+            "Conexión y consumo de APIs REST desarrolladas en Django.",
+            "Uso de Git, colaboración en equipo y práctica de metodología ágil.",
+          ],
+        },
+      ],
+    },
+    skills: {
+      title: "Habilidades",
     },
   },
   en: {
@@ -36,7 +100,70 @@ const messages = {
       iam: "I'm Armando Vaquero",
       developer: ["Junior Web Developer", "Full Stack Developer", "Passionate about Technology"],
       description:
-        "Passionate about full stack development, with a background in cybersecurity and experience in agile environments.",
+        "Passionate about full stack development, with a background in industrial cybersecurity and experience in agile environments.",
+    },
+    about: {
+      title: "About Me",
+      subtitle: "Get to know my profile",
+      description:
+        "I'm Armando Vaquero, a Junior Web Developer with a background in Web Application Development and practical experience in full stack development in agile environments. Solid background in front-end and back-end technologies, as well as a complementary training in industrial cybersecurity. Passionate about technology and constantly learning.",
+      downloadCV: "Download CV",
+      language: ["Spanish (Native)", "English (Level B1 - No Certificate))"],
+      location: "Granada, Spain",
+      education: "My Education",
+      studies: [
+        {
+          year: "2018 - 2020",
+          name: "General Certificate of Education (Science)",
+          school: "IES Manuel de Falla",
+          average: "Average Grade: 6,7 / 10",
+        },
+        {
+          year: "2020 - 2022",
+          name: "Certificate of Higher Education in Telecommunications and Computer Science",
+          school: "IES Virgen de las Nieves",
+          text: "Course focused on practices and technologies for protecting systems and networks within the industrial field. Topics include security audits, protection of critical infrastructures, and incident management.",
+          average: "Average Grade: 8,62 / 10",
+        },
+        {
+          year: "2022 - 2023",
+          name: "Advanced Course in Industrial Cybersecurity",
+          school: "IES Virgen de las Nieves",
+          text: "Course focused on practices and technologies for protecting systems and networks within the industrial field. Topics include security audits, protection of critical infrastructures, and incident management.",
+          average: "Average Grade: 8,8 / 10",
+        },
+        {
+          year: "2023 - 2025",
+          name: "Certificate of Higher Education in Web Application Development",
+          school: "IES Francisco Ayala",
+          text: "Degree focused on web application development, covering everything from website design and layout to the creation of more complex applications using languages like JavaScript, CSS, HTML, and some modern frameworks.",
+          average: "Average Grade: 9,2 / 10",
+        },
+      ],
+      experience: "My Experience",
+      works: [
+        {
+          time: "April 2022 - July 2022",
+          company: "Rodyh Seguridad",
+          text: [
+            "Planning and installation of wired and wireless alarms.",
+            "Installation and configuration of CCTV.",
+            "Installation and configuration of fire alarm systems.",
+          ],
+        },
+        {
+          time: "March 2025 - June 2025",
+          company: "Constella Intelligence",
+          text: [
+            "Development of interface based on Vue.js: reusable components, charts, routes, and client-side logic.",
+            "Connection and consumption of REST APIs developed in Django.",
+            "Use of Git, teamwork, and Agile methodology practice.",
+          ],
+        },
+      ],
+    },
+    skills: {
+      title: "Abilities",
     },
   },
 };

@@ -24,7 +24,10 @@ app.use(Particles, {
 app.mount("#app");
 
 AOS.init({
+  delay: 0,
   duration: 600,
-  once: true,
+  once: false,
+  mirror: true,
   easing: "ease-in-out",
+  startEvent: "DOMContentLoaded",
 });
