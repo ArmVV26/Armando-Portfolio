@@ -8,6 +8,7 @@
       <Home />
       <AboutMe />
       <Abilities />
+      <Projects />
     </main>
     <Footer />
   </div>
@@ -23,6 +24,7 @@ import Footer from "@/components/static/Footer.vue";
 import Home from "@/components/cards/Home.vue";
 import AboutMe from "@/components/cards/AboutMe.vue";
 import Abilities from "./components/cards/Abilities.vue";
+import Projects from "./components/cards/Projects.vue";
 
 // VARIABLES
 const particlesOptions = {

@@ -26,7 +26,7 @@
 
       <article class="mb-10 grid max-w-5xl grid-cols-1 gap-2 px-4 sm:grid-cols-2 sm:gap-8">
         <div class="flex gap-4">
-          <i class="fa-solid fa-earth-asia text-principal bg-decoration mb-2 rounded-full p-4"></i>
+          <i class="fa-solid fa-earth-asia bg-decoration mb-2 rounded-full p-4 text-white"></i>
           <div class="flex flex-col justify-center">
             <p
               v-for="language in $tm('about.language')"
@@ -40,7 +40,7 @@
 
         <div class="flex items-center justify-center gap-4">
           <i
-            class="fa-solid fa-location-dot text-principal bg-decoration mb-2 rounded-full px-4.5 py-4"
+            class="fa-solid fa-location-dot bg-decoration mb-2 rounded-full px-4.5 py-4 text-white"
           ></i>
           <p class="text-principal text-sm">{{ $t("about.location") }}</p>
         </div>
@@ -60,7 +60,7 @@
           class="border-decoration bg-base mb-4 rounded-lg border-l-4 p-4 shadow-md"
         >
           <div class="flex items-center gap-2">
-            <i class="fas fa-graduation-cap text-principal bg-decoration mb-2 rounded-full p-4"></i>
+            <i class="fas fa-graduation-cap bg-decoration mb-2 rounded-full p-4 text-white"></i>
             <h1 class="text-decoration font-semibold">{{ study.name }}</h1>
           </div>
           <p class="text-secondary text-sm">{{ study.school }} - {{ study.year }}</p>
@@ -82,7 +82,7 @@
           class="border-decoration bg-base mb-4 rounded-lg border-l-4 p-4 shadow-md"
         >
           <div class="flex items-center gap-2">
-            <i class="fa-solid fa-suitcase text-principal bg-decoration mb-2 rounded-full p-4"></i>
+            <i class="fa-solid fa-suitcase bg-decoration mb-2 rounded-full p-4 text-white"></i>
             <h1 class="text-decoration font-semibold">{{ work.company }}</h1>
           </div>
           <p class="text-secondary text-sm">{{ work.time }}</p>

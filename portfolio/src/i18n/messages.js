@@ -1,4 +1,5 @@
 import { language } from "@vue/eslint-config-prettier/skip-formatting";
+import { title } from "process";
 import { createI18n } from "vue-i18n";
 
 const messages = {
@@ -33,17 +34,11 @@ const messages = {
       education: "Mi Educación",
       studies: [
         {
-          year: "2018 - 2020",
-          name: "Bachillerato de Ciencias",
-          school: "IES Manuel de Falla",
-          average: "Nota Media: 6,7 / 10",
-        },
-        {
-          year: "2020 - 2022",
-          name: "Grado Superior en Telecomunicaciones e Informático",
-          school: "IES Virgen de las Nieves",
-          text: "Grado que proporciona una formación integral en la instalación, configuración y mantenimiento de redes y sistemas informáticos. Se aprende a gestionar servidores, redes de comunicación y telecomunicaciones.",
-          average: "Nota Media: 8,62 / 10",
+          year: "2023 - 2025",
+          name: "Grado Superior de Desarrollo de Aplicaciones Web",
+          school: "IES Francisco Ayala",
+          text: "Grado centrado en el desarrollo de aplicaciones web, cubriendo desde el diseño y la maquetación de sitios web hasta la creación de aplicaciones más complejas utilizando lenguajes como JavaScript, CSS, HTML y algunos frameworks modernos.",
+          average: "Nota Media: 9,2 / 10",
         },
         {
           year: "2022 - 2023",
@@ -53,24 +48,21 @@ const messages = {
           average: "Nota Media: 8,8 / 10",
         },
         {
-          year: "2023 - 2025",
-          name: "Grado Superior de Desarrollo de Aplicaciones Web",
-          school: "IES Francisco Ayala",
-          text: "Grado centrado en el desarrollo de aplicaciones web, cubriendo desde el diseño y la maquetación de sitios web hasta la creación de aplicaciones más complejas utilizando lenguajes como JavaScript, CSS, HTML y algunos frameworks modernos.",
-          average: "Nota Media: 9,2 / 10",
+          year: "2020 - 2022",
+          name: "Grado Superior en Telecomunicaciones e Informático",
+          school: "IES Virgen de las Nieves",
+          text: "Grado que proporciona una formación integral en la instalación, configuración y mantenimiento de redes y sistemas informáticos. Se aprende a gestionar servidores, redes de comunicación y telecomunicaciones.",
+          average: "Nota Media: 8,62 / 10",
+        },
+        {
+          year: "2018 - 2020",
+          name: "Bachillerato de Ciencias",
+          school: "IES Manuel de Falla",
+          average: "Nota Media: 6,7 / 10",
         },
       ],
       experience: "Mi Experiencia",
       works: [
-        {
-          time: "Abril 2022 - Julio 2022",
-          company: "Rodyh Seguridad",
-          text: [
-            "Planificación e Instalación de alarmas cableadas e inalámbricas.",
-            "Instalación y configuración de CCTV.",
-            "Instalación y configuración de sistemas de alarmas antincendios.",
-          ],
-        },
         {
           time: "Marzo 2025 - Junio 2025",
           company: "Constella Intelligence",
@@ -80,10 +72,61 @@ const messages = {
             "Uso de Git, colaboración en equipo y práctica de metodología ágil.",
           ],
         },
+        {
+          time: "Abril 2022 - Julio 2022",
+          company: "Rodyh Seguridad",
+          text: [
+            "Planificación e Instalación de alarmas cableadas e inalámbricas.",
+            "Instalación y configuración de CCTV.",
+            "Instalación y configuración de sistemas de alarmas antincendios.",
+          ],
+        },
       ],
     },
     skills: {
       title: "Habilidades",
+    },
+    projects: {
+      title: "Proyectos",
+      projects: [
+        {
+          title: "HikeLink",
+          description:
+            "Hikelink es una red social para senderistas. Permite subir rutas GPX, explorar mapas con Leaflet, valorar rutas y participar en el foro comunitario.",
+          image: "./img-projects/HikeLink-Img-HomePage.png",
+          tag: [
+            "Python",
+            "Django",
+            "DRF",
+            "PostgreSQL",
+            "Pgadmin",
+            "Vue.js",
+            "SCSS",
+            "Leaflet",
+            "Axios",
+            "Docker",
+          ],
+          github: { title: "Ver Codigo", link: "https://github.com/ArmVV26/HikeLink_TFG" },
+          demo: { title: "Ver Página", link: "https://www.hikelink.es/" },
+        },
+        {
+          title: "Pokemon Center",
+          description:
+            "Pokemon Center es una app para explorar Pokémons con información detallada, juegos interactivos y una calculadora de tipos.",
+          image: "./img-projects/PokemonCenter-Img-HomePage.png",
+          tag: [
+            "React",
+            "React Router",
+            "Vite",
+            "TailwindCSS",
+            "Recharts",
+            "Prettier",
+            "Lighthouse",
+          ],
+          github: { title: "Ver Codigo", link: "https://github.com/ArmVV26/React-Pokedex" },
+          demo: { title: "Ver Página", link: "#" },
+        },
+      ],
     },
   },
   en: {
@@ -113,17 +156,11 @@ const messages = {
       education: "My Education",
       studies: [
         {
-          year: "2018 - 2020",
-          name: "General Certificate of Education (Science)",
-          school: "IES Manuel de Falla",
-          average: "Average Grade: 6,7 / 10",
-        },
-        {
-          year: "2020 - 2022",
-          name: "Certificate of Higher Education in Telecommunications and Computer Science",
-          school: "IES Virgen de las Nieves",
-          text: "Course focused on practices and technologies for protecting systems and networks within the industrial field. Topics include security audits, protection of critical infrastructures, and incident management.",
-          average: "Average Grade: 8,62 / 10",
+          year: "2023 - 2025",
+          name: "Certificate of Higher Education in Web Application Development",
+          school: "IES Francisco Ayala",
+          text: "Degree focused on web application development, covering everything from website design and layout to the creation of more complex applications using languages like JavaScript, CSS, HTML, and some modern frameworks.",
+          average: "Average Grade: 9,2 / 10",
         },
         {
           year: "2022 - 2023",
@@ -133,24 +170,21 @@ const messages = {
           average: "Average Grade: 8,8 / 10",
         },
         {
-          year: "2023 - 2025",
-          name: "Certificate of Higher Education in Web Application Development",
-          school: "IES Francisco Ayala",
-          text: "Degree focused on web application development, covering everything from website design and layout to the creation of more complex applications using languages like JavaScript, CSS, HTML, and some modern frameworks.",
-          average: "Average Grade: 9,2 / 10",
+          year: "2020 - 2022",
+          name: "Certificate of Higher Education in Telecommunications and Computer Science",
+          school: "IES Virgen de las Nieves",
+          text: "Course focused on practices and technologies for protecting systems and networks within the industrial field. Topics include security audits, protection of critical infrastructures, and incident management.",
+          average: "Average Grade: 8,62 / 10",
+        },
+        {
+          year: "2018 - 2020",
+          name: "General Certificate of Education (Science)",
+          school: "IES Manuel de Falla",
+          average: "Average Grade: 6,7 / 10",
         },
       ],
       experience: "My Experience",
       works: [
-        {
-          time: "April 2022 - July 2022",
-          company: "Rodyh Seguridad",
-          text: [
-            "Planning and installation of wired and wireless alarms.",
-            "Installation and configuration of CCTV.",
-            "Installation and configuration of fire alarm systems.",
-          ],
-        },
         {
           time: "March 2025 - June 2025",
           company: "Constella Intelligence",
@@ -160,10 +194,61 @@ const messages = {
             "Use of Git, teamwork, and Agile methodology practice.",
           ],
         },
+        {
+          time: "April 2022 - July 2022",
+          company: "Rodyh Seguridad",
+          text: [
+            "Planning and installation of wired and wireless alarms.",
+            "Installation and configuration of CCTV.",
+            "Installation and configuration of fire alarm systems.",
+          ],
+        },
       ],
     },
     skills: {
       title: "Abilities",
+    },
+    projects: {
+      title: "Projects",
+      projects: [
+        {
+          title: "HikeLink",
+          description:
+            "Hikelink is a social network for hikers. It allows you to upload GPX routes, explore maps with Leaflet, rate routes and participate in the community forum.",
+          image: "./img-projects/HikeLink-Img-HomePage.png",
+          tag: [
+            "Python",
+            "Django",
+            "DRF",
+            "PostgreSQL",
+            "Pgadmin",
+            "Vue.js",
+            "SCSS",
+            "Leaflet",
+            "Axios",
+            "Docker",
+          ],
+          github: { title: "View Code", link: "https://github.com/ArmVV26/HikeLink_TFG" },
+          demo: { title: "View Website", link: "https://www.hikelink.es/" },
+        },
+        {
+          title: "Pokemon Center",
+          description:
+            "Pokemon Center is an app for exploring Pokémons with detailed information, interactive games and a type calculator.",
+          image: "./img-projects/PokemonCenter-Img-HomePage.png",
+          tag: [
+            "React",
+            "React Router",
+            "Vite",
+            "TailwindCSS",
+            "Recharts",
+            "Prettier",
+            "Lighthouse",
+          ],
+          github: { title: "View Code", link: "https://github.com/ArmVV26/React-Pokedex" },
+          demo: { title: "View Website", link: "#" },
+        },
+      ],
     },
   },
 };

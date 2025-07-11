@@ -1,11 +1,14 @@
 <template>
-  <section id="abilities" data-aos="flip-down" class="mx-5 mt-60 md:mx-20">
-    <h1 class="font-raleway text-principal mb-6 text-center text-2xl font-bold sm:text-4xl">
+  <section id="abilities" class="mx-5 mt-60 scroll-mt-20 md:mx-20">
+    <h1
+      data-aos="flip-down"
+      class="font-raleway text-principal mb-6 text-center text-2xl font-bold sm:text-4xl"
+    >
       {{ $t("skills.title") }}
     </h1>
 
     <section class="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
-      <article v-for="(group, index) in skills" :key="index">
+      <article v-for="(group, index) in skills" :key="index" data-aos="flip-down">
         <h1 class="text-decoration mb-2 text-lg font-bold sm:text-xl">{{ group.category }}</h1>
         <ul>
           <li v-for="(skill, i) in group.items" :key="i">

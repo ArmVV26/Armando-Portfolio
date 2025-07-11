@@ -76,7 +76,7 @@
       </div>
 
       <ul class="text-secondary flex flex-col gap-3 px-6 text-lg font-semibold lg:gap-6">
-        <li v-for="item in navItems" :key="locale">
+        <li v-for="item in navItems" :key="item">
           <a
             href="#"
             @click.prevent="scrollToSection(item.href)"
