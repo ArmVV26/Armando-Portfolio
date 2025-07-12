@@ -1,7 +1,7 @@
 <template>
   <section
     id="projects"
-    data-aos="fade-down"
+    data-aos="fade-top"
     class="mx-auto mt-60 max-w-screen-xl px-2 sm:px-6 xl:px-0"
   >
     <h1 class="font-raleway text-principal mb-6 text-center text-2xl font-bold sm:text-4xl">
@@ -51,16 +51,18 @@
           <a
             :href="project.github.link"
             target="_blank"
-            class="bg-decoration mb-6 rounded-xl px-4 py-2 font-semibold text-white shadow-lg transition hover:scale-105"
+            class="bg-decoration mb-6 rounded-xl px-3 py-2 text-sm font-semibold text-white shadow-lg transition hover:scale-105"
           >
+            <i class="fa-brands fa-github mr-2"></i>
             {{ project.github.title }}
           </a>
 
           <a
             :href="project.demo.link"
             target="_blank"
-            class="bg-decoration mb-6 rounded-xl px-4 py-2 font-semibold text-white shadow-lg transition hover:scale-105"
+            class="bg-decoration mb-6 rounded-xl px-3 py-2 text-sm font-semibold text-white shadow-lg transition hover:scale-105"
           >
+            <i class="fa-solid fa-arrow-up-right-from-square mr-2"></i>
             {{ project.demo.title }}
           </a>
         </div>

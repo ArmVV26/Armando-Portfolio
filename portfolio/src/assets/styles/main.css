@@ -69,7 +69,3 @@ body {
   overflow-x: hidden;
   font-family: "Roboto";
 }
-
-section[id] {
-  scroll-margin-top: 5rem;
-}
