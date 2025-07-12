@@ -5,11 +5,13 @@
       scrolled ? 'bg-base shadow-lg' : '',
     ]"
   >
-    <h1
-      class="font-raleway text-decoration from-principal to-decoration bg-gradient-to-r bg-clip-text text-3xl font-bold transition duration-500 hover:cursor-default hover:text-transparent"
+    <a
+      href="#"
+      @click.prevent="scrollToSection('#home')"
+      class="font-raleway text-decoration from-principal to-decoration bg-gradient-to-r bg-clip-text text-3xl font-bold transition duration-500 hover:text-transparent"
     >
       Armando
-    </h1>
+    </a>
 
     <!-- Navegation Menu -->
     <nav class="hidden md:block">

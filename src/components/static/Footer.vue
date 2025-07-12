@@ -22,11 +22,10 @@
     </div>
 
     <!-- Copy Text -->
-    <div class="text-principal flex gap-2 text-sm">
+    <div class="text-principal flex flex-wrap justify-center gap-2 text-sm">
       <p class="text-decoration">&copy;</p>
       <p>{{ new Date().getFullYear() }}</p>
-      <p class="text-decoration">Armando Vaquero Vargas</p>
-      <p>|</p>
+      <p class="text-decoration">Armando Vaquero Vargas.</p>
       <p>{{ $t("footer.rights") }}</p>
     </div>
   </footer>

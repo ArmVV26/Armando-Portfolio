@@ -1,7 +1,7 @@
 <template>
   <section
     id="contact"
-    data-aos="flip-up"
+    data-aos="fade-up"
     class="mx-auto mt-60 max-w-screen-xl px-2 sm:px-6 xl:px-0"
   >
     <!-- Title and Subtitle -->
