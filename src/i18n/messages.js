@@ -27,7 +27,7 @@ const messages = {
       title: "Sobre Mí",
       subtitle: "Conoce mi perfil",
       description:
-        "Soy Armando Vaquero, un Desarrollador Web Junior con formación en Desarrollo de Aplicaciones Web y experiencia práctica en desarrollo full stack en entornos ágiles. Sólida base en tecnologías front-end y back-end, así como una formación complementaria en ciberseguridad industrial. Apasionado por la tecnología y en constante aprendizaje. ",
+        "Soy Armando Vaquero Vargas, un Desarrollador Web Junior con formación en Desarrollo de Aplicaciones Web y experiencia práctica en desarrollo full stack en entornos ágiles. Sólida base en tecnologías front-end y back-end, así como una formación complementaria en ciberseguridad industrial. Apasionado por la tecnología y en constante aprendizaje. ",
       downloadCV: "Descargar CV",
       language: ["Español (Nativo)", "Ingles (Nivel B1 - Sin Certificado)"],
       location: "Granada, España",
@@ -74,11 +74,11 @@ const messages = {
         },
         {
           time: "Abril 2022 - Julio 2022",
-          company: "Rodyh Seguridad",
+          company: "Rodych Seguridad",
           text: [
             "Planificación e Instalación de alarmas cableadas e inalámbricas.",
             "Instalación y configuración de CCTV.",
-            "Instalación y configuración de sistemas de alarmas antincendios.",
+            "Instalación y configuración de sistemas de alarmas antiincendios.",
           ],
         },
       ],
@@ -124,7 +124,7 @@ const messages = {
             "Lighthouse",
           ],
           github: { title: "Ver Codigo", link: "https://github.com/ArmVV26/React-Pokedex" },
-          demo: { title: "Ver Página", link: "#" },
+          demo: { title: "Ver Página", link: "https://pokedexcenter.vercel.app/" },
         },
       ],
     },
@@ -217,7 +217,7 @@ const messages = {
         },
         {
           time: "April 2022 - July 2022",
-          company: "Rodyh Seguridad",
+          company: "Rodych Seguridad",
           text: [
             "Planning and installation of wired and wireless alarms.",
             "Installation and configuration of CCTV.",
@@ -267,7 +267,7 @@ const messages = {
             "Lighthouse",
           ],
           github: { title: "View Code", link: "https://github.com/ArmVV26/React-Pokedex" },
-          demo: { title: "View Website", link: "#" },
+          demo: { title: "View Website", link: "https://pokedexcenter.vercel.app/" },
         },
       ],
     },

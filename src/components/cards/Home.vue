@@ -49,7 +49,7 @@
     <!-- Image About Me -->
     <figure class="flex justify-center">
       <img
-        src="/img-armando.jpeg"
+        src="/img-personal/img-armando.jpeg"
         alt="Imagen representativa del dueño del portfolio"
         class="border-decoration h-50 w-50 rounded-full border-4 object-cover shadow-lg"
       />

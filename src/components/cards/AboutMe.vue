@@ -16,7 +16,7 @@
 
       <!-- CV Download -->
       <a
-        href="/cv.pdf"
+        href="/cv/ArmandoVaqueroVargas_CV.pdf"
         download
         class="bg-decoration mb-6 rounded-xl px-4 py-2 font-semibold text-white shadow-lg transition hover:scale-105"
       >
