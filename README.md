@@ -1,6 +1,5 @@
 <div align=center>
-    <h1 style="margin-top: -0.25rem">Armando Vaquero</h1>
-    <h2 style="font-style: italic">Portfolio Web</h2>
+    <h1>Armando Vaquero - Portfolio</h1>
 
 ![Vue.js](https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D)
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
@@ -114,7 +113,7 @@ npm run preview
 
 ## 🚀 Despliegue
 
-Este portfolio está desplegado en **Vercel**, una plataforma que permite hacer despliegues rápidos y eficientes para proyectos frontend.
+Este portfolio está desplegado en **Vercel**, una plataforma que permite hacer despliegues rápidos y eficientes para proyectos frontend. <br>
 🔗 Enlace en producción: https://armandovaquero.vercel.app/
 
 ---
