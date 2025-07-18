@@ -66,7 +66,6 @@ Las tecnologias que he usado para realizar mi proyecto son:
 - **Vite**
 - **TailwindCSS**
 - **@vueuse/core**
-- **@vueuse/motion**
 - **vue-i18n**
 - **vee-validate** + **yup**
 - **emailjs-com**
