@@ -33,21 +33,19 @@
 
     <!-- Language Selector, Dark Mode Switcher and Hamburguer Menu -->
     <section class="flex items-center gap-4 text-xl">
-      <Motion
-        :key="currentLang"
-        tag="button"
-        :title="$t('nav.change')"
-        @click="toggleLanguage"
-        class="text-secondary hover:text-decoration w-5 font-bold transition-all hover:cursor-pointer"
-        :initial="{ y: -20, opacity: 0 }"
-        :enter="{ y: 0, opacity: 1 }"
-        :leave="{ y: 20, opacity: 0 }"
-        :delay="200"
-        :duration="200"
-        transition="{ type: 'spring', stiffness: 300 }"
-      >
-        {{ currentLang === "es" ? "ES" : "EN" }}
-      </Motion>
+      <div class="relative h-6 w-6">
+        <Transition name="change-lang">
+          <button
+            :key="currentLang"
+            tag="button"
+            :title="$t('nav.change')"
+            @click="toggleLanguage"
+            class="text-secondary hover:text-decoration font-bold transition-all hover:cursor-pointer"
+          >
+            {{ currentLang === "es" ? "ES" : "EN" }}
+          </button>
+        </Transition>
+      </div>
       <ThemeToggle class="border-decoration border-2" @toggle="toggleDark" />
       <button
         @click="menuOpen = true"
@@ -58,40 +56,38 @@
     </section>
 
     <!-- Mobile Menu -->
-    <Motion
-      v-if="menuOpen"
-      tag="section"
-      :initial="{ x: 300, opacity: 0 }"
-      :enter="{ x: 0, opacity: 1 }"
-      :leave="{ x: 300, opacity: 0 }"
-      transition="{ type: 'spring', stiffness: 250 }"
-      class="bg-general border-decoration fixed top-0 right-0 z-50 block w-64 rounded-bl-xl border-b-2 border-l-2 pt-3 pb-5 shadow-2xl md:hidden"
-    >
-      <div class="border-decoration mb-6 flex items-center justify-between border-b-1 px-6">
-        <span class="text-decoration text-xl font-bold">Menu</span>
-        <button
-          @click="menuOpen = false"
-          class="text-secondary hover:text-decoration text-2xl transition-all duration-500 hover:scale-90 hover:rotate-90 hover:cursor-pointer"
-        >
-          <i class="fas fa-xmark"></i>
-        </button>
-      </div>
-
-      <ul class="text-secondary flex flex-col gap-3 px-6 text-lg font-semibold lg:gap-6">
-        <li v-for="item in navItems" :key="item">
-          <a
-            href="#"
-            @click.prevent="scrollToSection(item.href)"
-            class="group hover:text-decoration relative py-1 transition-colors"
+    <Transition name="mobile-menu">
+      <section
+        v-if="menuOpen"
+        tag="section"
+        class="bg-general border-decoration fixed top-0 right-0 z-50 block w-64 rounded-bl-xl border-b-2 border-l-2 pt-3 pb-5 shadow-2xl md:hidden"
+      >
+        <div class="border-decoration mb-6 flex items-center justify-between border-b-1 px-6">
+          <span class="text-decoration text-xl font-bold">Menu</span>
+          <button
+            @click="menuOpen = false"
+            class="text-secondary hover:text-decoration text-2xl transition-all duration-500 hover:scale-90 hover:rotate-90 hover:cursor-pointer"
           >
-            {{ $t(item.text) }}
-            <span
-              class="bg-decoration absolute bottom-0 left-1/2 h-[2px] w-0 transition-all duration-300 group-hover:left-0 group-hover:w-full"
-            ></span>
-          </a>
-        </li>
-      </ul>
-    </Motion>
+            <i class="fas fa-xmark"></i>
+          </button>
+        </div>
+
+        <ul class="text-secondary flex flex-col gap-3 px-6 text-lg font-semibold lg:gap-6">
+          <li v-for="item in navItems" :key="item">
+            <a
+              href="#"
+              @click.prevent="scrollToSection(item.href)"
+              class="group hover:text-decoration relative py-1 transition-colors"
+            >
+              {{ $t(item.text) }}
+              <span
+                class="bg-decoration absolute bottom-0 left-1/2 h-[2px] w-0 transition-all duration-300 group-hover:left-0 group-hover:w-full"
+              ></span>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </Transition>
   </header>
 </template>
 
@@ -144,4 +140,44 @@ onUnmounted(() => {
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+.change-lang-enter-active,
+.change-lang-leave-active {
+  transition: all 0.4s;
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.change-lang-enter-from {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.change-lang-leave-to {
+  opacity: 0;
+  transform: translateY(-50px);
+}
+
+/* Mobile Transition */
+.mobile-menu-enter-active {
+  transition: all 0.3s;
+}
+
+.mobile-menu-leave-active {
+  transition: all 0.3s;
+}
+
+.mobile-menu-enter-from {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.mobile-menu-leave-to {
+  opacity: 0;
+  transform: translateX(100%);
+}
+</style>

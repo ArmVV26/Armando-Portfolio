@@ -17,7 +17,6 @@
     "@tsparticles/slim": "^3.8.1",
     "@tsparticles/vue3": "^3.0.1",
     "@vueuse/core": "^13.5.0",
-    "@vueuse/motion": "^3.0.3",
     "aos": "^2.3.4",
     "emailjs-com": "^3.2.0",
     "prettier-plugin-tailwindcss": "^0.6.13",

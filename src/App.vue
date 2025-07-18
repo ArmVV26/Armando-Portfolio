@@ -12,13 +12,26 @@
       <Contact />
     </main>
     <Footer />
+
+    <!-- Scroll Top Button -->
+    <Transition name="scroll-button">
+      <button
+        v-if="showScrollTop"
+        @click="scrollToTop"
+        aria-label="Scroll to top"
+        title="Back to top"
+        class="bg-decoration fixed right-6 bottom-6 z-50 cursor-pointer rounded-full px-5 py-3.5 text-white shadow-xl transition-all duration-300 hover:scale-105"
+      >
+        <i class="fas fa-arrow-up"></i>
+      </button>
+    </Transition>
   </div>
 </template>
 
 <script setup>
 // IMPORTS
-import { onMounted } from "vue";
-import { initLenis } from "@/composables/useLenis";
+import { onMounted, onUnmounted, ref } from "vue";
+import { initLenis, getLenis } from "@/composables/useLenis";
 
 import Header from "@/components/static/Header.vue";
 import Footer from "@/components/static/Footer.vue";
@@ -29,6 +42,8 @@ import Projects from "./components/cards/Projects.vue";
 import Contact from "./components/cards/Contact.vue";
 
 // VARIABLES
+const showScrollTop = ref(false);
+
 const particlesOptions = {
   background: {
     color: {
@@ -86,13 +101,45 @@ const particlesOptions = {
 };
 
 // METODOS
+const handleScroll = () => {
+  showScrollTop.value = window.scrollY > 200;
+};
+
 onMounted(() => {
   initLenis();
+  window.addEventListener("scroll", handleScroll);
 });
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", handleScroll);
+});
+
+function scrollToTop() {
+  const lenis = getLenis();
+  lenis?.scrollTo(0);
+}
 
 window.onbeforeunload = () => {
   window.scrollTo(0, 0);
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.scroll-button-enter-active {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.scroll-button-leave-active {
+  transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.scroll-button-enter-from {
+  opacity: 0;
+  transform: translateY(50px) scale(0.8);
+}
+
+.scroll-button-leave-to {
+  opacity: 0;
+  transform: translateY(-50px) scale(0.8);
+}
+</style>
